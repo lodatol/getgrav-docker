@@ -19,6 +19,7 @@ RUN rm -rf html && \
     git clone https://github.com/getgrav/grav.git html && \
     cd html && \
     composer -n --no-ansi install && \
+    bin/grav install && \ 
     chown -R www-data .
 
 
