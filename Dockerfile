@@ -20,6 +20,7 @@ RUN rm -rf html && \
     cd html && \
     composer -n --no-ansi install && \
     bin/grav install && \ 
+    bin/gpm install -n -q -y admin && \
     chown -R www-data .
 
 
