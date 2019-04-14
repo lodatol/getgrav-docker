@@ -12,10 +12,13 @@ RUN apt-get update  && \
     docker-php-ext-install exif && \
     a2enmod rewrite
 
+COPY php.ini /usr/local/etc/php/php.ini
+
 RUN cd /tmp && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
     rm -rf /tmp/./*
+
 
 
 RUN rm -rf html && \
